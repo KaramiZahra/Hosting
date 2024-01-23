@@ -1,12 +1,18 @@
 @font-face {
+  font-family: "lightFont";
+  src: url(../font/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2);
+}
+@font-face {
   font-family: "primaryFont";
-  src: url(../font/fontawesome-webfont.woff2),
-    url(../font/Linearicons-Free.woff2),
-    url(../font/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2),
-    url(../font/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2),
-    url(../font/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2),
-    url(../font/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2),
-    url(../font/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2);
+  src: url(../font/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2);
+}
+@font-face {
+  font-family: "bolderFont";
+  src: url(../font/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2);
+}
+@font-face {
+  font-family: "boldFont";
+  src: url(../font/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2);
 }
 
 * {
@@ -17,5 +23,200 @@
 }
 
 :root {
-  --primary-blue: rgb(83, 150, 242);
+  --primary-blue: #3698f9;
+}
+
+.container {
+  max-width: 73rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* header  */
+/* top nav  */
+.top-nav {
+  background-color: #000;
+  color: #fff;
+}
+.top-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* top nav left  */
+.top-nav-left {
+  font-size: 0.8rem;
+  display: flex;
+}
+.top-nav-left p {
+  padding-right: 1rem;
+}
+.top-nav-left span {
+  display: none;
+  font-size: 1.2rem;
+  padding-right: 1.5rem;
+}
+/* top nav right  */
+.top-nav-right {
+  background-color: var(--primary-blue);
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 0.7rem;
+  padding: 0.57rem 1.8rem;
+  margin: 0.1rem 0;
+}
+/* menu bar  */
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #fff;
+}
+.menu li {
+  list-style: none;
+  display: inline-block;
+  transition: all 0.7s;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.77rem;
+  padding: 0 0.5rem;
+  transition: all 0.3s;
+}
+.menu li a:hover {
+  color: #707070;
+}
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0.6rem;
+  position: absolute;
+  top: 12%;
+  z-index: 1;
+}
+.submenu li {
+  padding: 0.5rem 0;
+  padding-right: 2.7rem;
+}
+.menu li:hover .submenu {
+  display: flex;
+}
+/* header icon  */
+.header-icon {
+  font-size: 1.7rem;
+  display: none;
+}
+/* header background  */
+.header-bg {
+  background-image: url(../image/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 86.2vh;
+  color: #fff;
+  position: relative;
+}
+.header-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.header-text h1 {
+  font-size: 2.9rem;
+  line-height: 3.3rem;
+  font-family: "bolderFont";
+}
+.header-text p {
+  font-size: 0.9rem;
+  font-family: "lightFont";
+  margin: 2rem 0;
+}
+.header-text button {
+  background-color: transparent;
+  border: none;
+}
+.header-text button a {
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.8rem;
+  margin: 1rem 0;
+  border-radius: 1.7rem;
+  border: 1px solid #fff;
+  transition: all 0.4s;
+}
+.header-text button a:hover {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+/*
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+*/
+/* Responsive */
+@media screen and (max-width: 576px) {
+  /* top nav  */
+  .top-nav-left p {
+    display: none;
+  }
+  .top-nav-left span {
+    display: flex;
+  }
+  /* header text  */
+  .header-text {
+    top: 10%;
+    left: 3%;
+  }
+  .header-text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* menu  */
+  .menu {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16rem;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  .menu li {
+    display: block;
+    padding: 0.8rem;
+  }
+  .menu li a {
+    color: #fff;
+    font-size: 1rem;
+    padding-right: 8rem;
+  }
+  .submenu {
+    display: none;
+    background-color: #000;
+    top: 45%;
+  }
+  .submenu li a {
+    padding-right: 0rem;
+  }
+  .menu li:hover .submenu {
+    display: block;
+  }
+  .header-icon {
+    display: block;
+  }
 }
