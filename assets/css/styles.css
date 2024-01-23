@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "primaryFont";
+  src: url(../font/fontawesome-webfont.woff2),
+    url(../font/Linearicons-Free.woff2),
+    url(../font/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2),
+    url(../font/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2),
+    url(../font/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2),
+    url(../font/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2),
+    url(../font/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "primaryFont";
+}
+
+:root {
+  --primary-blue: rgb(83, 150, 242);
+}
