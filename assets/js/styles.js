@@ -149,3 +149,22 @@ function createFeature(features) {
   });
 }
 createFeature(featureDB);
+
+// counter in 4 seconds
+let numbers = document.querySelectorAll(".num");
+let intervalDuration = 10;
+
+numbers.forEach(function (number) {
+  let startValue = 0;
+  let endValue = parseInt(number.getAttribute("data-val"));
+  let duration = 4000;
+  let increment = (endValue - startValue) / (duration / intervalDuration);
+
+  let counter = setInterval(function () {
+    startValue += increment;
+    number.innerHTML = Math.floor(startValue);
+    if (startValue >= endValue) {
+      clearInterval(counter);
+    }
+  }, intervalDuration);
+});
