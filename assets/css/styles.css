@@ -24,6 +24,7 @@
 
 :root {
   --primary-blue: #3698f9;
+  --primary-gray: #707070;
 }
 
 .container {
@@ -86,7 +87,7 @@
   transition: all 0.3s;
 }
 .menu li a:hover {
-  color: #707070;
+  color: var(--primary-gray);
 }
 .submenu {
   display: none;
@@ -190,7 +191,7 @@
 }
 .detail-name p,
 .detail-desc {
-  color: #707070;
+  color: var(--primary-gray);
   font-size: 0.9rem;
   font-family: "lightFont";
 }
@@ -198,7 +199,104 @@
   width: 77%;
   margin-left: 1rem;
 }
-
+/* plans  */
+.plans {
+  margin-bottom: 4rem;
+}
+.plan-title h1 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: "boldFont";
+}
+.plan-title p {
+  text-align: center;
+  color: var(--primary-gray);
+  font-family: "lightFont";
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+}
+/* plan box  */
+.plans-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plan-box {
+  background-color: #f9f9ff;
+  margin: 0 1rem 2rem 1rem;
+}
+/* plan header  */
+.plan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.7rem 2rem 2.7rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+/* plan name in header  */
+.plan-name p,
+.plan-desc p {
+  color: var(--primary-gray);
+  font-family: "lightFont";
+  font-size: 0.94rem;
+}
+/* plan price in header  */
+.plan-price {
+  font-family: "bolderFont";
+  font-size: 2rem;
+}
+/* plan description  */
+.plan-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: all 0.8s;
+}
+.plan-desc p {
+  padding-bottom: 1.7rem;
+}
+.desc-detail {
+  padding: 2rem 2.7rem 2rem 2.7rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.desc-feature {
+  padding: 2rem 2.7rem 2rem 2.7rem;
+}
+/* plan button  */
+.desc-btn {
+  background-color: transparent;
+  border: none;
+  margin: 0rem 2.7rem 2rem 2.7rem;
+}
+.desc-btn a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.87rem;
+  font-family: "boldFont";
+  padding: 0.8rem 2rem;
+}
+.desc-btn a span {
+  padding-left: 0.5rem;
+  transition: all 0.7s;
+}
+/* plan hovers  */
+.plan-box:hover .plan-desc {
+  background-color: var(--primary-blue);
+  box-shadow: 5px 8px 9px #dcdcdc;
+}
+.plan-box:hover .desc-feature p,
+.plan-box:hover .desc-detail {
+  color: #fff;
+}
+.plan-box:hover .desc-btn a {
+  background-color: #fff;
+  color: #000;
+}
+.plan-box:hover .desc-btn a span {
+  padding-left: 0.5rem;
+}
 /*
 .
 .
@@ -228,6 +326,18 @@
   }
   .header-text h1 {
     font-size: 2.4rem;
+  }
+  /* plan description  */
+  .plan-desc {
+    text-align: center;
+    align-items: center;
+  }
+  .plan-desc p {
+    font-size: 0.87rem;
+  }
+  .desc-btn a {
+    padding: 0.6rem 1.7rem;
+    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -273,5 +383,9 @@
   }
   .detail-desc {
     margin-left: 0;
+  }
+  /* plans container  */
+  .plans-container {
+    flex-wrap: wrap;
   }
 }
