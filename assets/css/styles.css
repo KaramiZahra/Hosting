@@ -479,6 +479,40 @@
   font-family: "lightFont";
   font-size: 0.9rem;
 }
+/* consultation  */
+.consultation {
+  background-color: var(--primary-blue);
+  text-align: center;
+  padding: 4rem 0.7rem;
+  margin-bottom: 7rem;
+}
+.consultation-text p {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+}
+.consultation-text h1,
+.consultation-text p {
+  color: #fff;
+}
+.consultation button {
+  background-color: transparent;
+  border: none;
+  margin-top: 2rem;
+}
+.consultation button a {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.consultation button a:hover {
+  background-color: transparent;
+  color: #fff;
+}
 /*
 .
 .
@@ -564,6 +598,11 @@
   /* unique features  */
   .unique-features-container {
     margin: 0 1rem 7rem 1rem;
+  }
+  /* consultation  */
+  .consultation button a {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
