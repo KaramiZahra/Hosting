@@ -27,11 +27,26 @@
   --primary-gray: #707070;
 }
 
+/* container  */
 .container {
   max-width: 73rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+/* title  */
+.title h1 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: "boldFont";
+}
+.title p {
+  text-align: center;
+  color: var(--primary-gray);
+  font-family: "lightFont";
+  margin: 0.5rem 0.5rem 4rem 0.5rem;
+}
+
 /* header  */
 /* top nav  */
 .top-nav {
@@ -203,17 +218,6 @@
 .plans {
   margin-bottom: 4rem;
 }
-.plan-title h1 {
-  text-align: center;
-  font-size: 2.1rem;
-  font-family: "boldFont";
-}
-.plan-title p {
-  text-align: center;
-  color: var(--primary-gray);
-  font-family: "lightFont";
-  margin: 0.5rem 0.5rem 4rem 0.5rem;
-}
 /* plan box  */
 .plans-container {
   display: flex;
@@ -346,6 +350,40 @@
   background-color: #fff;
   color: var(--primary-blue);
 }
+/* features  */
+.features-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin-bottom: 7rem;
+}
+.feature {
+  background-color: #f9f9ff;
+  transition: all 0.3s;
+  padding: 2.7rem;
+  margin: 1.2rem;
+}
+.feature:hover {
+  background-color: var(--primary-blue);
+  box-shadow: 5px 8px 9px #dcdcdc;
+}
+.feature:hover .feature-name,
+.feature:hover .feature-desc {
+  color: #fff;
+}
+.feature-name {
+  font-family: "boldFont";
+  margin-bottom: 1.1rem;
+}
+.feature-name span {
+  padding-right: 0.5rem;
+}
+.feature-desc {
+  color: var(--primary-gray);
+  font-size: 0.9rem;
+  font-family: "lightFont";
+}
 /*
 .
 .
@@ -390,6 +428,10 @@
   }
   /* map  */
   .map-text {
+    padding: 2rem;
+  }
+  /* features  */
+  .feature {
     padding: 2rem;
   }
 }

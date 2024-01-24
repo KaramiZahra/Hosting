@@ -91,3 +91,61 @@ function createBox(plans) {
   });
 }
 createBox(planDB);
+
+// features database
+featureDB = [
+  {
+    id: 1,
+    name: "Expert Technicians",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-user",
+  },
+  {
+    id: 2,
+    name: "Professional Service",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-license",
+  },
+  {
+    id: 3,
+    name: "Great Support",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-phone",
+  },
+  {
+    id: 4,
+    name: "Technical Skills",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-rocket",
+  },
+  {
+    id: 5,
+    name: "Highly Recomended",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-diamond",
+  },
+  {
+    id: 6,
+    name: "Positive Reviews",
+    desc: "Usage of the Internet is becoming more common due to rapid advancement of technology and power.",
+    icon: "lnr-bubble",
+  },
+];
+
+let featuresContainer = document.querySelector(".features-container");
+// create and insert features into he DOM
+function createFeature(features) {
+  features.forEach((feature) => {
+    featuresContainer.insertAdjacentHTML(
+      "beforeend",
+      '<div class="feature"><div class="feature-name"><span class="lnr ' +
+        feature.icon +
+        '"></span>' +
+        feature.name +
+        '</div><div class="feature-desc">' +
+        feature.desc +
+        "</div></div>"
+    );
+  });
+}
+createFeature(featureDB);
